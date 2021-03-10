@@ -1,0 +1,20 @@
+
+div{
+    display: block;
+    margin: auto;
+    width: 1000px;
+}
+app-header{
+    background-image: linear-gradient(to right, hsl(200, 100%, 80%), hsl(220, 100%, 60%) );
+    display: block;
+    padding: 20px;
+    text-align: right;
+    color: hsl(100, 100%, 90%);
+    border-radius: 5px;
+}
+
+app-about-me{
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
