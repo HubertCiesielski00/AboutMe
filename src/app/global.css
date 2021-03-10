@@ -3,3 +3,8 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
+.topic{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.3rem;
+}
