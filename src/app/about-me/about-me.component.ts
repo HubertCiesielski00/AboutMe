@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee, faIdCard } from '@fortawesome/free-solid-svg-icons';
+import { faIdeal } from '@fortawesome/free-brands-svg-icons';
+import { faCoffee, faIdBadge, faIdCard, faIdCardAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.css',
-              '../global.css']
+  styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent implements OnInit {
 
 
-  faBadge = faIdCard;
+  faTopicIcon = faIdBadge;
 
   constructor() { }
 
