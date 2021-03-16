@@ -1,6 +1,57 @@
-<div>
-  <app-header></app-header>
-  <app-about-me></app-about-me>
-  <app-my-skills></app-my-skills>
-  <app-learning></app-learning>
-</div>
+<app-header></app-header>
+
+<nav>
+  <button (click) = "templateFunc(AboutMe,MySkills,MyPlans)">{{Sections[0]}}</button>
+  <button (click) = "templateFunc(MySkills,AboutMe,MyPlans)">{{Sections[1]}}</button>
+  <button (click) = "templateFunc(MyPlans, AboutMe, MySkills)">{{Sections[2]}}</button>
+</nav>
+
+<section #AboutMe>
+    <div class="topic"><span>{{Sections[0]}}</span><fa-icon [icon]='faBadge'></fa-icon></div>
+  <p>
+     Poszukuje pracy gdzie mógłbym się rozwijać, uczyć się nowych rzeczy. Chętnie poszerzam horyzonty, czego przykładem może być własnie programistyka.
+    Zajęcie, które było odszkocznią stało się moją pasją i liczę, że uda mi się w przyszłości na tej pasji zarobić.
+  </p>
+
+  <p>
+    Wolny czas nierzadko spędzam na amatorkim kolarstwie, spotkaniach ze znajomymi oraz na właśnie kodowaniu, tak dla czystej przyjemności.
+    Ponadto lubię dobry film oraz herbatę, najlepiej w tym samym czasie
+  </p>
+  
+</section>
+
+<section #MySkills class="section__hidden" >
+  <div class="topic"><span>{{Sections[1]}}:</span><fa-icon [icon]='faCheck'></fa-icon></div>
+<p>
+    Obracam się swobodnie w HTML5, CSS w wersji 3, oraz JavaScripcie.
+    Ponad to znam podstawy kodowania w innych językach: C++, C#, PHP, Javie oraz umiem budować zapytania do baz danych.
+    Potrafię korzystać systemu kontroli wersji popularnego Gita oraz z repozytoriów zdalnych. Nistraszny mi ani terminal linuxow, ani wiersz poleceń.
+</p>
+
+<p>
+  Jestem też obeznany w technologiach teleinformatycznych: potradię konfigurować centrale telefoniczne, konfigurować urządzenia sieciowe i serwery oparte o System windows serwer.
+</p>
+
+<p>
+    Z innych mniej technicznych umiejętności mogę wymienić, komunikatywność, kreatywność, sumienność, zaangażowanie.
+    Mam też prawo jazdy kat. B, oraz potrafię pracować z innymi.
+</p>
+</section>
+
+<section #MyPlans class="section__hidden">  
+    <div class="topic">
+      <span>{{Sections[2]}}:</span><fa-icon [icon]='faBook'></fa-icon>
+    </div>
+    <p>
+        Planuję nauczyć się TypeScript, doskonalić swoje umiejętności w Angularze, poznać założenia innych frameworków takich jak Vue czy React, nauczyć się kożystania z Node.js.
+    </p>
+    
+    <p>
+        Chcę też nauczyć się techniki Mobile First oraz tachnologię PWA do tworzenia aplikacji dedykowanych urządzeniom przenośnym oraz wykorzystywać API dla lepszej komunikacji z serwerami.
+    </p>
+    <p>
+        Chcę też lepiej poznać nowe założenia wprowadzone wraz ze standardem ECMAScript6
+    </p>
+</section>
+
+
