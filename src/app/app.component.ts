@@ -1,7 +1,8 @@
+import { prepareEventListenerParameters } from '@angular/compiler/src/render3/view/template';
 import { Component, OnInit } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faIdBadge, faCheckSquare } from '@fortawesome/free-regular-svg-icons';
-import { faBook, faBookReader } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faBookReader, faGlassWhiskey, faMailBulk } from '@fortawesome/free-solid-svg-icons';
 
 import { browser } from 'protractor';
 import { BrowserStack } from 'protractor/built/driverProviders';
@@ -15,15 +16,16 @@ import { Browser } from 'selenium-webdriver';
 })
 export class AppComponent {
   title = 'AboutMe';
-  faBook = faBookReader;
-  faCheck = faCheckSquare;
-  faBadge = faIdBadge;
+  faicons = [faIdBadge,faCheckSquare,faBookReader,faMailBulk]
 
-  Sections = ['O mnie','Moje umiejętności','Plany rozwoju'];
+  Sections = ['O mnie', 'Umiejętności', 'Plany nauki', 'Kontakt'];
 
-  templateFunc(ToShow: HTMLElement, ToHide:HTMLElement, ToHide2: HTMLElement ){
-    ToShow.classList.remove("section__hidden");
-    ToHide.classList.add("section__hidden");
-    ToHide2.classList.add("section__hidden");
+  PrevClass = "el1";
+
+  test(elem:HTMLElement, Class:string){
+    elem.classList.remove(this.PrevClass);
+    elem.classList.add(Class);
+    this.PrevClass = Class;
   }
+
 }

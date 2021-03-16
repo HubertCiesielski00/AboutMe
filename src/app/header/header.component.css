@@ -1,9 +1,11 @@
-div{
-    margin-right: 50px;
+.NameCont{
+    width: 70%;
 }
-h4{
-    font-size: 1.3rem;
+.ImgCont{
+    width: 30%;
 }
-h1{
-    font-size: 3rem;
+.ImgCont, .NameCont
+{
+    text-align: center;
+    align-content: center;
 }
