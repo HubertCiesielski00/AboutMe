@@ -1,16 +1,13 @@
-*{
---first-color--: hsl(10, 100%, 15%);
---font-color--:hsl(0, 10%, 90%);
 
-}
-body{
-    background-color: var(--font-color--);
-}
 main{
+    border-radius: 5px;
+    box-sizing: content-box;
+    margin: 70px auto;
     display: flex;
     justify-content: space-between;
-    width: 80vw;
-    margin: 20px auto;
+    width: 1500px;
+    padding: 50px;
+    background-color: var(--element-color--);
 }
 
 app-header{
@@ -27,7 +24,6 @@ nav{
     justify-content: space-between;
     flex-direction: column;
     width: 500px;
-    max-width: initial;
 }
 nav button{
     display: flex;
@@ -38,13 +34,13 @@ nav button{
     color: var(--font-color--);
     border: var(--font-color--) 2px solid;
 
+    
 }
 .infoCont{
-    
     display: flex;
     width: 50vw;
     overflow-x: hidden;
-    color: black;
+    color: white;
     font-size: 1.3rem;
     
 }
@@ -74,4 +70,52 @@ nav button{
 .el4{
     transform: translateX(-300%);
 }
-
+@media(max-width: 1700px){
+    
+    main{
+    width: 100vw;
+    margin: 0;
+    }
+    .infoCont{
+        width: 100vw;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 1500px){
+    main{
+        width: 100vw;
+        margin: 0;
+        display: block;
+        padding: 0;
+    }
+    nav{
+        flex-direction: row;
+        width: 100%;
+    }
+    nav button{
+        border: none;
+        width: 25%;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+    }
+    .infoCont{
+        width: 100%;
+    }
+}
+@media (max-width: 800px)
+{
+    
+    app-header{
+        font-size:15px;
+    }
+    nav button{
+        font-size: 15px;
+    }
+    fa-icon{
+        display: none;
+    }
+    .infoCont{
+        font-size: 10px;
+        padding: 0;
+    }
+}

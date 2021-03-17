@@ -8,4 +8,8 @@
 {
     text-align: center;
     align-content: center;
+}@media(max-width: 800px){
+    img{
+        display: none;
+    }
 }
