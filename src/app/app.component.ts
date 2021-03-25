@@ -20,12 +20,10 @@ export class AppComponent {
 
   Sections = ['O mnie', 'Umiejętności', 'Plany nauki', 'Kontakt'];
 
-  PrevClass = "el1";
+  class:string = 'el1'
 
-  test(elem:HTMLElement, Class:string){
-    elem.classList.remove(this.PrevClass);
-    elem.classList.add(Class);
-    this.PrevClass = Class;
+  ChangeSection(Class:string){
+    this.class = Class;
   }
 
 }

@@ -9,15 +9,27 @@ main{
     padding: 50px;
     background-color: var(--element-color--);
 }
+a{
+    text-decoration: none;
+    color: var(--font-color--)
+}
 
-app-header{
-    display: Flex;
+app-header, app-footer{
     margin: 0;
-    justify-content: flex-start;
+    background-color: var(--first-color--);
     color: var(--font-color--);
     width: 100vw;
-    background-color: var(--first-color--);
+}
+app-header{
+    display: Flex;
+    justify-content: flex-start;
     padding: 7px;
+}
+app-footer{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
 }
 nav{
     display: flex;
@@ -33,8 +45,11 @@ nav button{
     background-color: var(--first-color--);
     color: var(--font-color--);
     border: var(--font-color--) 2px solid;
-
-    
+    transition: background-color 200ms ease-in-out;
+}
+nav button:hover, nav button:focus{
+    background-color: var(--font-color--);
+    color:var(--backgrounf-color--);
 }
 .infoCont{
     display: flex;
@@ -46,7 +61,7 @@ nav button{
 }
 .mover{
     height: 100%;
-    width: 100%;
+    width: 80%%;
     display: flex;
 }
 .infoCont div{
